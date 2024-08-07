@@ -1,0 +1,8 @@
+checking system installed version this packages commands: (CLI)
+-----------------------------------
+1. Node : node -v
+2. Nvm : npm -v
+3. Angular : ng v
+4. Angular project run -> ng serve 
+5. At a time project and browser run -> ng serve --o
+6. Already 1 project and another project run add port -> ng serve --port 4203
