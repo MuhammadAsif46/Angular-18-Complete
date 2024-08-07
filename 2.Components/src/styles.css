@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.primary-color{
+    background-color: yellow;
+    color: #000;
+    padding: 10px;
+}

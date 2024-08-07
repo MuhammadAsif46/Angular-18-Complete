@@ -23,3 +23,6 @@ checking system installed version this packages commands: (CLI)
 1. Items that you don't want to send to GitHub should be placed in the .gitignore file.
 2. If it's a folder, use a slash (/) then folder name and if it's a file, just use the file name.
 
+*Component:-
+1. create component command full -> ng generate component <component-name>
+2. create component command short -> ng g c <component-name>
