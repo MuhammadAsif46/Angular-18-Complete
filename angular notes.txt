@@ -6,3 +6,20 @@ checking system installed version this packages commands: (CLI)
 4. Angular project run -> ng serve 
 5. At a time project and browser run -> ng serve --o
 6. Already 1 project and another project run add port -> ng serve --port 4203
+
+* package.json file:-
+1. Dependencies is a part of deployed build run project packages.
+2. devDependencies is a part of localy enviroment run project packages.
+
+* angular.json file:- (angular project configration file):
+1. single page application. (index.html)
+2. if change file name to change name directory src/<filename> in angular.json file.
+3. if project are run first run file (main.ts).
+
+* style.css file:- (angular global styling file):
+1. in which styles to use one or more components using style.css global file.
+
+*gitignore file:-
+1. Items that you don't want to send to GitHub should be placed in the .gitignore file.
+2. If it's a folder, use a slash (/) then folder name and if it's a file, just use the file name.
+
