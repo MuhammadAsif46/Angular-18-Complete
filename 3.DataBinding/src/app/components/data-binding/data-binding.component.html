@@ -1,1 +1,68 @@
-<p>data-binding works!</p>
+<h1>Data Binding Topic</h1>
+<div class="row">
+  <div class="col-4">One way - from .ts to .html</div>
+  <div class="col-4"></div>
+  <div class="col-4"></div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <div class="row">
+      <div class="col-4 bg-success text-white">
+        Interpolation
+        <h2>{{ courseName }}</h2>
+        <!--interpolation-->
+        <h3>{{ rollNo }}</h3>
+        <!--interpolation-->
+        <input type="text" value="{{ courseName }}" />
+        <!--interpolation-->
+        <br />
+        <input type="{{ inputType }}" value="abc" />
+      </div>
+      <div class="col-4">
+        Property Binding
+        <div [class]="myClass">Danger</div>
+        <!-- property binding -->
+        <input type="text" [value]="courseName" />
+        <!-- property binding -->
+        <br />
+        <input [type]="inputType" value="abc" />
+        <!-- property binding -->
+      </div>
+      <div class="col-4">
+        <button
+          class="btn btn-primary"
+          (click)="showAlert('click to button element')"
+        >
+          Show welcome
+        </button>
+        <br />
+        <br />
+        <span
+          class="btn btn-warning"
+          (click)="showAlert('click to span element')"
+          >Show welcome</span
+        >
+        <br />
+        <br />
+        <span class="btn btn-dark" (click)="changeCourseName()"
+          >Change Course</span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <input type="text" [(ngModel)]="courseName" /> - {{courseName}}
+
+    <input type="checkbox" [(ngModel)]="isActive">
+
+    <select [(ngModel)]="cityName">
+        <option value="">Select</option>
+        <option value="Karachi">Karachi</option>
+        <option value="Multan">Multan</option>
+        <option value="Lahore">Lahore</option>
+    </select>
+  </div>
+  <div class="col-6">
+    <h2>{{firstName()}}</h2>
+  </div>
+</div>

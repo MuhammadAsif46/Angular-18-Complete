@@ -33,3 +33,27 @@ checking system installed version this packages commands: (CLI)
 2. Number
 3. Boolean
 4. Date
+
+*Data Binding:
+    1.One way data binding:
+        - One way - from .ts file to .html file using Interpolation in .ts file that is One Way data binding.
+        - in which place using variable using Interpolation {{}}.
+
+    2. Property Binding:
+        - property binding using [class] in class and passing variable name.
+        - any html dom property giving by [].
+    
+    3. Event Binding:
+        - passing data .html to .ts file using event binding.
+        - button event passing html property (click) and function name
+
+    * Two way data binding: (ngModel)
+        - two way data binding in angular using ngModal.
+        - ngModal using syntax [(ngModal)].
+        - two way data binding means .ts to .html change, .html to .ts change.
+        - ngModel only works in jsut input element.
+
+    * Signal (new A-18):
+        - it's just like a variable but writing and calling method change.
+        - signal call as a method.
+        - update to signal variable using .set method.
