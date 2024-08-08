@@ -26,3 +26,10 @@ checking system installed version this packages commands: (CLI)
 *Component:-
 1. create component command full -> ng generate component <component-name>
 2. create component command short -> ng g c <component-name>
+
+
+*basic Typescript Data Types:
+1. String
+2. Number
+3. Boolean
+4. Date
