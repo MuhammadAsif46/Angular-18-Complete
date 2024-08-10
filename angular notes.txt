@@ -57,3 +57,20 @@ checking system installed version this packages commands: (CLI)
         - it's just like a variable but writing and calling method change.
         - signal call as a method.
         - update to signal variable using .set method.
+
+*Directives:-
+    1. Structural Directive:
+        *ngIf - to add to remove element from DOM.
+        *ngFor - to create dynamic element.
+        *ngSwitch - swich case to dynamic element.
+
+    *ngIf - it need true or false value
+        we can pass value either from
+                variable
+                comparision
+                function
+    
+    *ngFor - we need to pass array
+        we can pass value either from
+                variable
+                function
