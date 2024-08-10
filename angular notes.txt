@@ -47,7 +47,7 @@ checking system installed version this packages commands: (CLI)
         - passing data .html to .ts file using event binding.
         - button event passing html property (click) and function name
 
-    * Two way data binding: (ngModel)
+    * Two way data binding: (ngModel) is using to import ---FormsModule--- :
         - two way data binding in angular using ngModal.
         - ngModal using syntax [(ngModal)].
         - two way data binding means .ts to .html change, .html to .ts change.
@@ -58,13 +58,13 @@ checking system installed version this packages commands: (CLI)
         - signal call as a method.
         - update to signal variable using .set method.
 
-*Directives:-
+*Directives:- 
     1. Structural Directive:
         *ngIf - to add to remove element from DOM.
         *ngFor - to create dynamic element.
         *ngSwitch - swich case to dynamic element.
 
-    *ngIf - it need true or false value
+    *ngIf - it need true or false value -- is using to import ---CommonModule--- :
         we can pass value either from
                 variable
                 comparision
