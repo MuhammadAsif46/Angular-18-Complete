@@ -12,18 +12,27 @@
     </div>
   </div>
   <div class="col-3">
-    <div class="p-3 text-center" [ngClass]="isDiv2Active ? 'bg-success' : 'bg-warning' ">
+    <div
+      class="p-3 text-center"
+      [ngClass]="isDiv2Active ? 'bg-success' : 'bg-warning'"
+    >
       <h4>Div-2</h4>
     </div>
   </div>
   <div class="col-3">
-    <div class="p-3 text-center text-white" [ngClass]="num1 === num2 ? 'bg-dark':'bg-danger' ">
+    <div
+      class="p-3 text-center text-white"
+      [ngClass]="num1 === num2 ? 'bg-dark' : 'bg-danger'"
+    >
       <h4>Div-3</h4>
     </div>
   </div>
   <div class="col-3">
     <!-- <div class="p-3 text-center"  [ngClass]="div4IsChecked ? 'bg-success': '' "> -->
-    <div class="p-3 text-center" [ngClass]="selectedCity === 'Pindi' ? 'bg-primary' : 'bg-danger' " >
+    <div
+      class="p-3 text-center"
+      [ngClass]="selectedCity === 'Pindi' ? 'bg-primary' : 'bg-danger'"
+    >
       <h4>Div-4</h4>
     </div>
   </div>
@@ -35,7 +44,13 @@
     <button class="btn btn-primary mx-2" (click)="bgPrimary()">Add Blue</button>
   </div>
   <div class="col-3 text-center">
-    <button class="btn" [ngClass]="isDiv2Active ? 'bg-success' : 'bg-warning' " (click)="toggleBgColor()">Toggle</button>
+    <button
+      class="btn"
+      [ngClass]="isDiv2Active ? 'bg-success' : 'bg-warning'"
+      (click)="toggleBgColor()"
+    >
+      Toggle
+    </button>
   </div>
   <div class="col-3">
     <div class="d-flex align-items-center">
@@ -83,28 +98,43 @@
 </div>
 
 <div class="row pt-5">
-  <div class="col-6">
-    <table class="table table-borders">
+  <div class="col-12">
+    <table class="table table-bordered mx-auto w-75">
       <thead>
         <tr>
-          <th>Sr No</th>
-          <th>Roll No</th>
           <th>Std Name</th>
           <th>Std Address</th>
           <th>Std Status</th>
+          <th>Std Gender</th>
+          <th>Std Marks</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let stdData of studentList;let srNo = index" >
-          <td>{{srNo +1}}</td>
-          <td>{{stdData.stdId}}</td>
-          <td>{{stdData.stdName}}</td>
-          <td>{{stdData.city}}</td>
+        <tr *ngFor="let stdData of studentList; let srNo = index">
+          <td>{{ stdData.stdName }}</td>
+          <td>{{ stdData.city }}</td>
+          <td
+            [ngStyle]="{
+              'background-color': stdData.isActive ? 'yellow' : 'red'
+            }"
+          >
+            <span>{{ stdData.isActive ? "Active" : "Unactive" }}</span>
+          </td>
+          <!-- <td>{{stdData.isActive}}</td> -->
+          <td>{{ stdData.gender }}</td>
           <td>
-            <span *ngIf="stdData.isActive">Active</span>
-            <span *ngIf="!stdData.isActive">UnActive</span>
-        </td>
-            <!-- <td>{{stdData.isActive}}</td> -->
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                [ngStyle]="{'width':stdData.totalMarks +'%'}"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >{{ stdData.totalMarks }}</div>
+            </div>
+            <!-- {{ stdData.totalMarks }} -->
+          </td>
         </tr>
       </tbody>
     </table>

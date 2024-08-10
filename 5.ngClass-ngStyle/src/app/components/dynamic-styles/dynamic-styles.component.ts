@@ -61,11 +61,11 @@ export class DynamicStylesComponent {
   // for loop Example : 02 -using array of objects
 
   studentList: any[] = [
-    { stdId: 12, stdName: 'AAA', city: 'Karachi', isActive: true },
-    { stdId: 21, stdName: 'BBB', city: 'Hydrabad', isActive: false },
-    { stdId: 32, stdName: 'CCC', city: 'Pindi', isActive: true },
-    { stdId: 45, stdName: 'DDD', city: 'Punjab', isActive: false },
-    { stdId: 91, stdName: 'FFF', city: 'Lahore', isActive: false },
+    { stdId: 12, totalMarks:23, gender:"male", stdName: 'AAA', city: 'Karachi', isActive: true },
+    { stdId: 21, totalMarks:33, gender:"female", stdName: 'BBB', city: 'Hydrabad', isActive: false },
+    { stdId: 32, totalMarks:56, gender:"male", stdName: 'CCC', city: 'Pindi', isActive: true },
+    { stdId: 45, totalMarks:78, gender:"female", stdName: 'DDD', city: 'Punjab', isActive: false },
+    { stdId: 91, totalMarks:96, gender:"male", stdName: 'FFF', city: 'Lahore', isActive: false },
   ];
 
   // end work from ngFor examples:
