@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './conditions.component.css',
 })
 export class ConditionsComponent {
+  // start work from ngIf examples:
+
   // if condition example : 01
   div1IsVisible: boolean = true;
 
@@ -42,5 +44,30 @@ export class ConditionsComponent {
   // if condition example : 04
   div4IsChecked: boolean = true;
   selectedCity: string = '';
+
+  // end work from ngIf examples:
+
+  // start work from ngFor examples:
+
+  // for loop Example : 01 -using array
+  cityArray: string[] = [
+    'Karachi',
+    'Islamabad',
+    'Quetta',
+    'Peshawar',
+    'Lahore',
+  ];
+
+  // for loop Example : 02 -using array of objects
+
+  studentList:any[] = [
+    { stdId:12, stdName: "AAA", city:"Karachi",isActive:true },
+    { stdId:21, stdName: "BBB", city:"Hydrabad",isActive:false },
+    { stdId:32, stdName: "CCC", city:"Pindi",isActive:true },
+    { stdId:45, stdName: "DDD", city:"Punjab",isActive:false },
+    { stdId:91, stdName: "FFF", city:"Lahore",isActive:false },
+  ]
+
+  // end work from ngFor examples:
 }
 

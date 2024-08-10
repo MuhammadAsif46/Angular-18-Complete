@@ -70,7 +70,9 @@ checking system installed version this packages commands: (CLI)
                 comparision
                 function
     
-    *ngFor - we need to pass array
+    *ngFor - we need to pass only array:  -- is using to import ---CommonModule--- :
         we can pass value either from
                 variable
                 function
+        - in which element is repeat you can use for loop.
+        - normally for loop use table data and dropDown element.

@@ -1,60 +1,112 @@
 <div class="mt-2 p-2 bg-secondary text-white rounded">
-    <h1>Structural Directive</h1>
-    <p>*ngIf, *ngFor .....</p>
+  <h1>Structural Directive</h1>
+  <p>*ngIf, *ngFor .....</p>
 </div>
 
 <!--There are 4 Examples to understand *ngIf  -->
 <!-- start here -->
 <div class="row pt-3">
-    <div class="col-3">
-        <div *ngIf="div1IsVisible" class="bg-danger p-3 text-center">
-            <h4>Div-1</h4>
-        </div>
+  <div class="col-3">
+    <div *ngIf="div1IsVisible" class="bg-danger p-3 text-center">
+      <h4>Div-1</h4>
     </div>
-    <div class="col-3">
-        <div *ngIf="div2IsVisible" class="bg-warning p-3 text-center">
-            <h4>Div-2</h4>
-        </div>
+  </div>
+  <div class="col-3">
+    <div *ngIf="div2IsVisible" class="bg-warning p-3 text-center">
+      <h4>Div-2</h4>
     </div>
-    <div class="col-3">
-        <div *ngIf="num1 === num2" class="bg-success p-3 text-center">
-            <h4>Div-3</h4>
-        </div>
+  </div>
+  <div class="col-3">
+    <div *ngIf="num1 === num2" class="bg-success p-3 text-center">
+      <h4>Div-3</h4>
     </div>
-    <div class="col-3">
-        <!-- <div *ngIf="div4IsChecked" class="bg-primary p-3 text-center"> -->
-        <div *ngIf="selectedCity === 'Pindi'" class="bg-primary p-3 text-center">
-            <h4>Div-4</h4>
-        </div>
+  </div>
+  <div class="col-3">
+    <!-- <div *ngIf="div4IsChecked" class="bg-primary p-3 text-center"> -->
+    <div *ngIf="selectedCity === 'Pindi'" class="bg-primary p-3 text-center">
+      <h4>Div-4</h4>
     </div>
+  </div>
 </div>
 
 <div class="row pt-3">
-    <div class="col-3 text-center">
-        <button class="btn btn-danger" (click)="hideDiv1()">Hide</button>
-        <button class="btn btn-success mx-2" (click)="showDiv1()">Show</button>
+  <div class="col-3 text-center">
+    <button class="btn btn-danger" (click)="hideDiv1()">Hide</button>
+    <button class="btn btn-success mx-2" (click)="showDiv1()">Show</button>
+  </div>
+  <div class="col-3 text-center">
+    <button class="btn btn-primary" (click)="toggleDiv2()">Toggle</button>
+  </div>
+  <div class="col-3">
+    <div class="d-flex align-items-center">
+      <input type="text" [(ngModel)]="num1" placeholder="Num-1" class="w-50" />
+      <input type="text" [(ngModel)]="num2" placeholder="Num-2" class="w-50" />
     </div>
-    <div class="col-3 text-center">
-        <button class="btn btn-primary" (click)="toggleDiv2()">Toggle</button>
+  </div>
+  <div class="col-3">
+    <div class="d-flex align-items-center">
+      <input [(ngModel)]="div4IsChecked" type="checkbox" class="w-50" />
+      <select [(ngModel)]="selectedCity">
+        <option value="" hidden>Select City</option>
+        <option value="Lahore">Lahore</option>
+        <option value="Pindi">Pindi</option>
+        <option value="Hydrabad">Hydrabad</option>
+      </select>
     </div>
-    <div class="col-3">
-        <div class="d-flex align-items-center">
-            <input type="text" [(ngModel)]="num1" placeholder="Num-1" class="w-50">
-            <input type="text" [(ngModel)]="num2" placeholder="Num-2" class="w-50">
-        </div>
-    </div>
-    <div class="col-3">
-        <div class="d-flex align-items-center">
-            <input [(ngModel)]="div4IsChecked" type="checkbox" class="w-50">
-            <select [(ngModel)]="selectedCity">
-                <option value="" hidden>Select City</option>
-                <option value="Lahore">Lahore</option>
-                <option value="Pindi">Pindi</option>
-                <option value="Hydrabad">Hydrabad</option>
-            </select>
-        </div>
-    </div>
+  </div>
 </div>
 <!-- ends here -->
 
 <!--There are 4 Examples to understand *ngFor  -->
+
+<div class="row pt-5">
+  <div class="col-3">
+    <ul>
+      <li *ngFor="let city of cityArray">{{ city }}</li>
+    </ul>
+  </div>
+  <div class="col-3">
+    <div *ngFor="let cityName of cityArray">{{ cityName }}</div>
+  </div>
+  <div class="col-3">
+    <select>
+      <option value="" *ngFor="let cities of cityArray">{{ cities }}</option>
+    </select>
+  </div>
+  <div class="col-3">
+    <select>
+      <option *ngFor="let std of studentList" [value]="std.stdId">
+        {{ std.stdName }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<div class="row pt-5">
+  <div class="col-6">
+    <table class="table table-borders">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Roll No</th>
+          <th>Std Name</th>
+          <th>Std Address</th>
+          <th>Std Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stdData of studentList;let srNo = index" >
+          <td>{{srNo +1}}</td>
+          <td>{{stdData.stdId}}</td>
+          <td>{{stdData.stdName}}</td>
+          <td>{{stdData.city}}</td>
+          <td>
+            <span *ngIf="stdData.isActive">Active</span>
+            <span *ngIf="!stdData.isActive">UnActive</span>
+        </td>
+            <!-- <td>{{stdData.isActive}}</td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
