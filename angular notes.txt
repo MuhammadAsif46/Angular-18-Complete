@@ -76,3 +76,7 @@ checking system installed version this packages commands: (CLI)
                 function
         - in which element is repeat you can use for loop.
         - normally for loop use table data and dropDown element.
+
+    2. Attribute Directive:
+        [ngClass] : -- is using to import ---CommonModule--- :
+        [ngStyle] : -- is using to import ---CommonModule--- :
