@@ -1,0 +1,39 @@
+<h2 class="bg-primary text-white text-center p-2 mx-2">
+  Pipe concept in Angular
+</h2>
+<h4 class="mx-2">Custom Pipe & Default Pipe</h4>
+
+<div class="row mx-2">
+  <div class="col-3 border rounded-3 p-3">
+    Orignal Value - {{ firstName }}
+    <br />
+    after Pipe - {{ firstName | uppercase }}
+  </div>
+  <div class="col-3 border rounded-3 p-3">
+    Orignal Value - {{ firstName }}
+    <br />
+    after Pipe - {{ firstName | lowercase }}
+  </div>
+  <div class="col-3 border rounded-3 p-3">
+    Orignal Value - {{ info }}
+    <br />
+    after Pipe - {{ info | titlecase }}
+  </div>
+  <div class="col-3 border rounded-3 p-3">
+    Orignal Value - {{ firstName }}
+    <br />
+    after Pipe - {{ firstName | uppercase }}
+  </div>
+</div>
+<div class="row m-2 g-2">
+    <div class="col-3 border p-3 rounded-3">
+        Orignal Value - {{ currentDate }}
+        <br />
+        after Pipe - {{ currentDate | date }}
+    </div>
+    <div class="col-3 border p-3 rounded-3">
+        Orignal Value - {{ currentDate }}
+        <br />
+        after Pipe - {{ currentDate | date:'dd-mm-yy' }}
+    </div>
+</div>

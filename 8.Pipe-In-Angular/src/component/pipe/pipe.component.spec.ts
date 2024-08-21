@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IfelseComponent } from './ifelse.component';
+import { PipeComponent } from './pipe.component';
 
-describe('IfelseComponent', () => {
-  let component: IfelseComponent;
-  let fixture: ComponentFixture<IfelseComponent>;
+describe('PipeComponent', () => {
+  let component: PipeComponent;
+  let fixture: ComponentFixture<PipeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IfelseComponent]
+      imports: [PipeComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(IfelseComponent);
+    fixture = TestBed.createComponent(PipeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
