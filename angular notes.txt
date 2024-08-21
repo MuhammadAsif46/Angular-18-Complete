@@ -80,3 +80,16 @@ checking system installed version this packages commands: (CLI)
     2. Attribute Directive:
         [ngClass] : -- is using to import ---CommonModule--- :
         [ngStyle] : -- is using to import ---CommonModule--- :
+
+*Routing:
+
+    SPA - Single Page Application (React, Angular and Vue.js)
+    means only one HTML page render and changes UI different screens.
+
+    1. What is Routing ?
+    2. What is Route Object ?
+    3. How to create Routes ?
+    4. How to implement navbar for navigation ?
+    5. How to Redirect from one component to other component
+        :- from .ts
+        :- from .html
