@@ -1,0 +1,76 @@
+<h2 class="bg-warning p-2 text-center">
+  &#64; if,&#64; else and &#64; else if works here!
+</h2>
+<div class="row mt-2">
+  <div class="col-3">
+    @if(div1IsVisible){
+    <div class="bg-primary p-2 rounded-1 m-2 text-center">
+      <h2>Div-1</h2>
+    </div>
+    }
+  </div>
+  <div class="col-3">
+    @if(div2IsVisible){
+
+    <div class="bg-warning p-2 rounded-1 my-2 text-center">
+      <h2>Div-2 W</h2>
+    </div>
+    }@else{
+
+    <div class="bg-success p-2 rounded-1 my-2 text-center">
+      <h2>Div-2 W</h2>
+    </div>
+    }
+  </div>
+  <div class="col-3">
+    @if(num1 === num2){
+
+    <div class="bg-danger p-2 rounded-1 my-2 text-center">
+      <h2>Div-3</h2>
+    </div>
+    }
+  </div>
+  <div class="col-3">
+    <div class="bg-dark text-white p-2 rounded-1 my-2 text-center">
+      @if(selectedStatus === 'active'){
+
+      <p>State is Active</p>
+      } @else if (selectedStatus === 'unactive') {
+
+      <p>State is unActive</p>
+      } @else if(selectedStatus === 'pending'){
+
+      <p>State is Pending</p>
+      } @else{
+        <p>Please Select status</p>
+      }
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <div class="text-center">
+      <button class="btn btn-danger" (click)="hideDiv1()">Hide</button>
+      <button class="btn btn-success ms-2" (click)="showDiv1()">Show</button>
+    </div>
+  </div>
+  <div class="col-3 text-center">
+    <button class="btn btn-primary" (click)="toggleDiv2()">Toggle</button>
+  </div>
+  <div class="col-3">
+    <div class="d-flex align-items-center">
+      <input type="text" [(ngModel)]="num1" placeholder="Num-1" class="w-50" />
+      <input type="text" [(ngModel)]="num2" placeholder="Num-2" class="w-50" />
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="d-flex align-items-center">
+      <select [(ngModel)]="selectedStatus">
+        <option value="" hidden>Select option</option>
+        <option value="active">State is Active</option>
+        <option value="unactive">State is unActive</option>
+        <option value="pending">State is Pending</option>
+      </select>
+    </div>
+  </div>
+</div>
