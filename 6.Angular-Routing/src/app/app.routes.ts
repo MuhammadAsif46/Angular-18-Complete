@@ -6,7 +6,7 @@ import { AboutComponent } from '../components/about/about.component';
 import { HomeComponent } from '../components/home/home.component';
 
 export const routes: Routes = [
-  // create Profile Route
+  // create Routes
   {
     path: 'profile', // Mandatory
     component: ProfileComponent, // Mandatory
