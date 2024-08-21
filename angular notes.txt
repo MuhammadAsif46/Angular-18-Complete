@@ -122,5 +122,18 @@ checking system installed version this packages commands: (CLI)
 *Control-Flow-Statement:
     1. What is control flow statement ?
     2. How to write @if, @else and @else if.
+        - @if(){}
+        - @else if(){}
+        - @else{}
     3. How to wrote @for.
+        <ul>
+            @for (item of items; track $index) {
+                <li>{{ item }}</li>
+            }
+        </ul>
     4. How to write @switch.
+
+*Important Question:-
+    - difference between ngIf,ngfor and @if, @for
+    ngif or ngfor we are use to import .ts file "commonModule"
+    @if or @for we are use don't import .ts file "commonModule"
