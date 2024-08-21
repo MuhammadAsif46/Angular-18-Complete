@@ -117,4 +117,10 @@ checking system installed version this packages commands: (CLI)
     1. Router outlet is a directive which is used to resposible to render activated route component. 
     2. syntax ---->  <router-outlet></router-outlet>
     3. added anchor(<a>)tag before Augular-17 using href using path but after A-17 using routerLink and add path.
-    4. using routerLink first we import app.ts file and add imports in RouterLink   
+    4. using routerLink first we import app.ts file and add imports in RouterLink  
+
+*Control-Flow-Statement:
+    1. What is control flow statement ?
+    2. How to write @if, @else and @else if.
+    3. How to wrote @for.
+    4. How to write @switch.
