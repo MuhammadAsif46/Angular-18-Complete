@@ -1,0 +1,32 @@
+<h2 class="bg-success p-2 text-center text-white">&#64; Switch works here!</h2>
+
+<div class="row">
+    <div class="col-4">
+        <input type="text" [(ngModel)]="dayNumber">
+    </div>
+    <div class="col-4">
+        <h3>Day Name is : 
+            @switch(dayNumber){
+                @case ('0'){
+                    <span>Sunday</span>}
+                @case ('1'){
+                    <span>Monday</span>}
+                @case ('2'){
+                    <span>Tuesday</span>}
+                @case ('3'){
+                   <span>Wednesday</span>}
+                @case ('4'){
+                   <span>Thursday</span>}
+                @case ('5'){
+                    <span>Friday</span>}
+                @case ('6'){
+                    <span>Saturday</span>}
+                @default{
+                    <span>Wrong Entry</span>
+                }
+            }
+        </h3>
+    </div>
+    <div class="col-4"></div>
+</div>
+
