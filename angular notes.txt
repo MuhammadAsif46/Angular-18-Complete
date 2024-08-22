@@ -137,3 +137,21 @@ checking system installed version this packages commands: (CLI)
     - difference between ngIf,ngfor and @if, @for
     ngif or ngfor we are use to import .ts file "commonModule"
     @if or @for we are use don't import .ts file "commonModule"
+
+*Pipes In Angular: why we use (use in data format):
+    1- Build in Pipes.
+    2- custom pipes.
+
+    -> Build in Pipes:
+        - DatePipe -      : Formats a date value according to locale rules.
+        - UpperCasePipe - : Transforms text to all upper case.
+        - LowerCasePipe - : Transforms text to all lower case.
+        - CurrencyPipe -  : Transforms a number to a currency string, formatted according to locale rules.
+        - DecimalPipe -   : Transforms a number into a string with a decimal point, formatted according to locale rules.
+        - PercentPipe -   : Transforms a number to a percentage string, formatted according to locale rules.
+        - AsyncPipe -     : Subscribe and unsubscribe to an asynchronous source such as an observable.
+        - JsonPipe -      : just developer usage Display a component object property to the screen as JSON for debugging.
+
+    -> Custom Pipes:
+        - custom pipe create command "ng g p <pipeName>" (na) not available:
+        - function name transform in custom pipes. 

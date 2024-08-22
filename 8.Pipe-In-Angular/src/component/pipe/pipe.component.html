@@ -5,35 +5,70 @@
 
 <div class="row mx-2">
   <div class="col-3 border rounded-3 p-3">
+    Pipe using - UPPERCASE-PIPE
+    <br/>
     Orignal Value - {{ firstName }}
     <br />
     after Pipe - {{ firstName | uppercase }}
   </div>
   <div class="col-3 border rounded-3 p-3">
+    Pipe using - LOWERCASE-PIPE
+    <br/>
     Orignal Value - {{ firstName }}
     <br />
     after Pipe - {{ firstName | lowercase }}
   </div>
   <div class="col-3 border rounded-3 p-3">
+    Pipe using - TITLECASE-PIPE
+    <br/>
     Orignal Value - {{ info }}
     <br />
     after Pipe - {{ info | titlecase }}
   </div>
   <div class="col-3 border rounded-3 p-3">
+    Pipe using - CURRENCY-PIPE
+    <br/>
     Orignal Value - {{ firstName }}
     <br />
     after Pipe - {{ firstName | uppercase }}
   </div>
 </div>
 <div class="row m-2 g-2">
-    <div class="col-3 border p-3 rounded-3">
-        Orignal Value - {{ currentDate }}
-        <br />
-        after Pipe - {{ currentDate | date }}
-    </div>
-    <div class="col-3 border p-3 rounded-3">
-        Orignal Value - {{ currentDate }}
-        <br />
-        after Pipe - {{ currentDate | date:'dd-mm-yy' }}
-    </div>
+  <div class="col-4 border p-3 rounded-3">
+    Pipe using - DATE-PIPE
+    <br/>
+    Orignal Value - {{ currentDate }}
+    <br />
+    after Pipe - {{ currentDate | date }}
+  </div>
+  <div class="col-4 border p-3 rounded-3">
+    Pipe using - DATE-PIPE --- FORMATE
+    <br/>
+    Orignal Value - {{ currentDate | date : "dd-MM-yyyy" }}
+    <br />
+    after Pipe - {{ currentDate | date : "dd-MM-yy" }}
+  </div>
+  <div class="col-4 border p-3 rounded-3">
+    Pipe using - DATE-PIPE --- FORMATE
+    <br/>
+    Orignal Value - {{ currentDate | date : "dd-MMM-yyyy" }}
+    <br />
+    after Pipe - {{ currentDate | date : "dd/MMM/yy" }}
+  </div>
+</div>
+<div class="row m-2 g-3">
+ <div class="col-5 border p-3 rounded-3 mx-1">
+    Pipe using - JSON-PIPE 
+    <br/>
+    Orignal Value - {{ studentList }}
+    <br />
+    after Pipe - {{ studentList | json }}
+  </div>
+ <div class="col-5 border p-3 rounded-3 mx-1">
+    Pipe using - NA-PIPE BY CREATING (CUSTOM)
+    <br/>
+    Orignal Value - {{ studentList.city }}
+    <br />
+    after Pipe - {{ studentList.city | na }}
+  </div>
 </div>
