@@ -154,4 +154,11 @@ checking system installed version this packages commands: (CLI)
 
     -> Custom Pipes:
         - custom pipe create command "ng g p <pipeName>" (na) not available:
-        - function name transform in custom pipes. 
+        - function name transform in custom pipes.
+
+*Template-Form Flow:
+    1- first we create a object.
+    2- second we bind all objects keys in input field using ngModel.
+    3- If your input field is inside a form, then the name attribute is mandatory.
+    4- If you want to apply validation, we create a '#property' for that purpose, store 'ngModel' within it, and then apply the desired validation.
+    5- If you want to disable the button until the user completes the entire form, you need to add a '#form' property to the form and store 'ngForm' in it. Then, use the invalid property on the button to disable it.

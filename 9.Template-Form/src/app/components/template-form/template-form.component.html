@@ -1,61 +1,84 @@
-<div class="bg-primary p-3 text-white m-2">
-  <h2 class="bg-primary p-3">Template Form works here!</h2>
+<div class="bg-secondary p-3 text-white m-2 rounded-2">
+  <h2>Template Form works here!</h2>
   <h4>Using -- ngModel</h4>
 </div>
 
-<form class="row g-3 needs-validation" novalidate>
+<form class="row g-3 needs-validation w-75 mx-auto" #form="ngForm">
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">First name</label>
     <input
       type="text"
+      name="firstName"
+      #fname="ngModel"
+      [(ngModel)]="studentObj.firstName"
       class="form-control"
-      id="validationCustom01"
-      value="Mark"
       required
+      minlength="4"
     />
+    <div class="text-danger">
+      @if ((fname.touched || fname.dirty) && fname.errors?.['required']) {
+        <span>This is Required</span>
+      } @else if((fname.touched || fname.dirty) && fname.errors?.['minlength']){
+        <span>min 4 character required</span>
+      }
+    </div>
+    <!-- errors those things are shown that you apply validation for in the input field. -->
+    <!-- <div>
+      {{fname.errors}}
+    </div> -->
     <div class="valid-feedback">Looks good!</div>
   </div>
   <div class="col-md-4">
     <label for="validationCustom02" class="form-label">Last name</label>
     <input
       type="text"
+      name="lastName"
+      [(ngModel)]="studentObj.lastName"
       class="form-control"
-      id="validationCustom02"
-      value="Otto"
-      required
     />
     <div class="valid-feedback">Looks good!</div>
   </div>
   <div class="col-md-4">
     <label for="validationCustomUsername" class="form-label">Username</label>
     <div class="input-group has-validation">
-      <span class="input-group-text" id="inputGroupPrepend">@</span>
+      <span class="input-group-text" id="inputGroupPrepend"> &#64; </span>
       <input
         type="text"
+        name="userName"
+        [(ngModel)]="studentObj.userName"
         class="form-control"
-        id="validationCustomUsername"
-        aria-describedby="inputGroupPrepend"
-        required
       />
       <div class="invalid-feedback">Please choose a username.</div>
     </div>
   </div>
   <div class="col-md-6">
     <label for="validationCustom03" class="form-label">City</label>
-    <input type="text" class="form-control" id="validationCustom03" required />
+    <input
+      type="text"
+      name="city"
+      class="form-control"
+      [(ngModel)]="studentObj.city"
+    />
     <div class="invalid-feedback">Please provide a valid city.</div>
   </div>
   <div class="col-md-3">
     <label for="validationCustom04" class="form-label">State</label>
-    <select class="form-select" id="validationCustom04" required>
+    <select class="form-select" name="state" [(ngModel)]="studentObj.state">
       <option selected disabled value="">Choose...</option>
-      <option>...</option>
+      <option>hello</option>
+      <option>world</option>
+      <option>user</option>
     </select>
     <div class="invalid-feedback">Please select a valid state.</div>
   </div>
   <div class="col-md-3">
     <label for="validationCustom05" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="validationCustom05" required />
+    <input
+      type="text"
+      name="zip"
+      class="form-control"
+      [(ngModel)]="studentObj.zip"
+    />
     <div class="invalid-feedback">Please provide a valid zip.</div>
   </div>
   <div class="col-12">
@@ -64,8 +87,8 @@
         class="form-check-input"
         type="checkbox"
         value=""
-        id="invalidCheck"
-        required
+        name="isAgreeTerms"
+        [(ngModel)]="studentObj.isAgreeTerms"
       />
       <label class="form-check-label" for="invalidCheck">
         Agree to terms and conditions
@@ -74,6 +97,16 @@
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button class="btn btn-secondary me-2" type="submit" (click)="resetForm()">Reset</button>
+    <button class="btn btn-primary" type="submit" [disabled]="form.invalid" (click)="onSubmit()">
+      Submit
+    </button>
   </div>
 </form>
+
+<div class="row">
+  <div class="col-6">
+    <h4>Form Value</h4>
+    <pre>{{ formValue | json }}</pre>
+  </div>
+</div>
