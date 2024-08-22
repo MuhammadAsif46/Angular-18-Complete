@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 
-import { IfelseComponent } from '../components/ifelse/ifelse.component';
-import { ForComponent } from '../components/for/for.component';
-import { SwitchComponent } from '../components/switch/switch.component';
+import { IfelseComponent } from './components/ifelse/ifelse.component';
+import { ForComponent } from './components/for/for.component';
+import { SwitchComponent } from './components/switch/switch.component';
 
 export const routes: Routes = [
   // create all Routes:
