@@ -1,1 +1,122 @@
-<p>reactive-form works!</p>
+<div class="bg-secondary p-3 text-white m-2 rounded-2">
+  <h2>Reactive Form works here!</h2>
+  <h4>Create form & Validation</h4>
+</div>
+
+<form class="row g-3 needs-validation w-75 mx-auto" [formGroup]="studentForm">
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">First name</label>
+    <input
+      type="text"
+      name="firstName"
+      formControlName="firstName"
+      class="form-control"
+    
+    />
+    <div class="text-danger">
+        @if(studentForm.controls["firstName"].touched && studentForm.controls["firstName"].errors?.["required"]){
+
+            <span>This is Required</span>
+        } @else if (studentForm.controls["firstName"].touched && studentForm.controls["firstName"].errors?.["minlength"]){
+            <span>Min 4 characters required</span>
+
+        }
+    </div>
+    <!-- <div class="text-danger">
+      @if ((fname.touched || fname.dirty) && fname.errors?.['required']) {
+        <span>This is Required</span>
+      } @else if((fname.touched || fname.dirty) && fname.errors?.['minlength']){
+        <span>min 4 character required</span>
+      }
+    </div> -->
+    <!-- errors those things are shown that you apply validation for in the input field. -->
+    <!-- <div>
+      {{fname.errors}}
+    </div> -->
+    <div class="valid-feedback">Looks good!</div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Last name</label>
+    <input
+      type="text"
+      name="lastName"
+      formControlName="lastName"
+      class="form-control"
+    />
+    <div class="valid-feedback">Looks good!</div>
+  </div>
+  <div class="col-md-4">
+    <label class="form-label">Username</label>
+    <div class="input-group">
+      <span class="input-group-text"> &#64; </span>
+      <input
+        type="text"
+        name="userName"
+        formControlName="userName"
+        class="form-control"
+      />
+    </div>
+      @if(studentForm.controls["userName"].touched && studentForm.controls["userName"].errors?.["email"]){
+          <span class="text-danger">Email Not Proper</span>
+        }
+      <!-- <div class="invalid-feedback">Please choose a username.</div> -->
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom03" class="form-label">City</label>
+    <input
+      type="text"
+      name="city"
+      formControlName="city"
+      class="form-control"
+    />
+    <div class="invalid-feedback">Please provide a valid city.</div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom04" class="form-label">State</label>
+    <select class="form-select" formControlName="state" name="state">
+      <option selected disabled value="">Choose...</option>
+      <option>hello</option>
+      <option>world</option>
+      <option>user</option>
+    </select>
+    <div class="invalid-feedback">Please select a valid state.</div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label">Zip</label>
+    <input
+      type="text"
+      name="zip"
+      formControlName="zipCode"
+      class="form-control"
+    />
+    <div class="invalid-feedback">Please provide a valid zip.</div>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        formControlName="isAcceptTerms"
+        value=""
+        name="isAgreeTerms"
+      />
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">You must agree before submitting.</div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-secondary me-2" type="submit" >Reset</button>
+    <button class="btn btn-primary" type="submit" (click)="onSave()" [disabled]="studentForm.valid">
+      Submit
+    </button>
+  </div>
+</form>
+
+<div class="row">
+  <div class="col-6">
+    <h4>Form Value</h4>
+    {{ formValue | json }}
+  </div>
+</div>
