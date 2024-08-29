@@ -171,3 +171,14 @@ checking system installed version this packages commands: (CLI)
     5- If you want to get the value of the form, you can simply use .value to retrieve it.
     6- If you want to disable the button until the user completes the entire form, you need to add a formGroup property to the form and store 'formGroupName' in it. Then, use the invalid property on the button to disable it.
     7- Then, for each input element, assign the name of your control to the formControlName attribute.
+
+* API Intergration:
+    1- What is HttpClient ?
+        -> http client is a angular library by default import to use call apis
+    2- What are Get, Post, Put, Delete methods ?
+    3- What is API ?
+        -> Api is a simple url to hit the server with the request and return the response.
+        -> API is a bridge that allows different software systems to talk to each other
+    4- Get API 
+        -- .http://jsonplaceholder.typicode.com/users
+        -- .http://projectap.gerasim.in/api/RealEstate/GetAllCustomers
