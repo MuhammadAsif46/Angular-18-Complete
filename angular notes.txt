@@ -176,9 +176,20 @@ checking system installed version this packages commands: (CLI)
     1- What is HttpClient ?
         -> http client is a angular library by default import to use call apis
     2- What are Get, Post, Put, Delete methods ?
+        -> GET: Retrieves data from the server without modifying it; used to request and view data.
+        -> POST: Sends data to the server to create a new resource; used for adding or submitting data.
+        -> PUT: Updates an existing resource on the server with new data; used to modify or replace a resource.
+        -> DELETE: Removes a specified resource from the server; used to delete data.
+
     3- What is API ?
         -> Api is a simple url to hit the server with the request and return the response.
         -> API is a bridge that allows different software systems to talk to each other
     4- Get API 
         -- .http://jsonplaceholder.typicode.com/users
-        -- .http://projectap.gerasim.in/api/RealEstate/GetAllCustomers
+        -- .http://projectap.gerasim.i n/api/RealEstate/GetAllCustomers
+
+    Set-Up:-
+    1- first we import provideHttpClient() in app.config.ts file.
+    2- second we create constructor use HttpClient object in your component.
+    3- third we create function and add api url to string form.
+    4- fourth hold api response data in .subscribe() method.
