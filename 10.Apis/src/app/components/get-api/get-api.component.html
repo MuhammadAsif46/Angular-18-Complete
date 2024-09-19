@@ -1,15 +1,15 @@
 <div class="row">
-    <div class="col-12 bg-primary p-3 text-center text-white fs-5 fw-bold">
-        Get API integration
-    </div>
-    <div class="col-2 p-2">
-        <button class="btn btn-success" (click)="getAllUsers()">Get Users</button>
-    </div>
-    <div class="col-3 p-2">
-        <select class="form-select">
-            @for (item of userList; track $index) {
-                <option value="">{{item.name}}</option>
-            }
-        </select>
-    </div>
+  <div class="col-12 bg-primary p-3 text-center text-white fs-5 fw-bold">
+    Get API integration
+  </div>
+  <div class="col-2 p-2" style="height: 30vh">
+    <button class="btn btn-success" (click)="getAllUsers()">Get Users</button>
+  </div>
+  <div class="col-3 p-2">
+    <select class="form-select">
+      @for (item of userList; track $index) {
+      <option value="">{{ item.name }}</option>
+      }
+    </select>
+  </div>
 </div>
