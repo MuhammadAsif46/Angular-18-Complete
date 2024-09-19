@@ -14,7 +14,7 @@ export class GetApiComponent {
 
   constructor(private http: HttpClient) {
     // this.getAllUsers(); page load the API call will be made.
-    this.getAllCustomers();  // page load the API call will be made.
+    // this.getAllCustomers();  // page load the API call will be made.
   }
 
   getAllUsers() {
@@ -28,7 +28,8 @@ export class GetApiComponent {
 
   getAllCustomers() {
     this.http
-      .get('https://projectapi.gerasim.in/api/RealEstate/GetAllCustomers1')
+      // .get('https://projectapi.gerasim.in/api/RealEstate/GetAllCustomers1')
+      .get('https://projectapi.gerasim.in/api/RealEstate/GetAllCustomers')
       .subscribe((response: any) => {
         console.log('CustomerRes-->', response.data);
         this.customerList = response.data;

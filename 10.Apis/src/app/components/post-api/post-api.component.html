@@ -1,7 +1,66 @@
-<div class="row">
-    <div class="col-12 bg-success mt-2 p-3 text-center text-white fs-5 fw-bold">
-        Post API integration
+<div class="mt-2 p-2 bg-success text-white rounded">
+    <h4>Post API</h4>
+    <h3>Create Department, Department List</h3>
+</div>
+
+<div class="row pt-2">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                Department List
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Sr No</th>
+                                    <th>Name</th>
+                                    <th>City</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (item of departmentList; track $index) {
+                                    <tr>
+                                        <td>{{$index+1}}</td>
+                                        <td>{{item.departmentName}}</td>
+                                        <td>{{item.departmentLogo}}</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-2"></div>
-    <div class="col-3"></div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                New Department
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Department Name</label>
+                        <input type="text" [(ngModel)]="deptObj.departmentName" class="form-control" placeholder="Enter Name">
+                    </div>
+                    <div class="col-12">
+                        <label for="">Department Logo</label>
+                        <input type="text" [(ngModel)]="deptObj.departmentLogo" class="form-control" placeholder="Enter Logo Url">
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-6 text-center">
+                        <button class="btn btn-secondary">Reset</button>
+                    </div>
+                    <div class="col-6 text-center">
+                        <button class="btn btn-success" (click)="onSave()" >Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
