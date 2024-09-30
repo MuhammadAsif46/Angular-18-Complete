@@ -9,5 +9,10 @@
 
 <br>
 
+
 <app-alert [message]="'Error occured.'" [alertType]="'Error'" ></app-alert>
+
+<app-custom-btn (onBtnClick)="getData($event)" [btnClass]="'btn btn-primary'" [btnText]="'Update'"></app-custom-btn>
+
+
 

@@ -221,8 +221,20 @@ checking system installed version this packages commands: (CLI)
         In Angular, reusable components are self-contained units of functionality or UI 
         that can be used across multiple parts of an application with customizable 
         inputs and outputs.
+    
     2. What is use of Input?
         The input passes data from the parent to the child.
+        steps are follow:
+        1. First, import @Input in the .ts file of the reusable component.
+        2. Define a variable with @Input() decorator in the reusable component's .ts file to receive data.
+        3. In the component where you want to use this reusable component, add the component's selector in the template.
+        4. Pass the property value using square brackets [], ensuring the name matches the variable defined in the reusable component's .ts file.
+    
     3. What is use of Output?
         The output passes data from the child to the parent.
-    4. when we have to create reusable component ?
+        steps are follow:
+        1. Import @Output and EventEmitter into the reusable component’s .ts file.
+        2. Create a function in the reusable component that calls the .emit() method of EventEmitter. You can pass a value inside .emit(value) as an argument, e.g., .emit("hiii everyOne").
+        3. In the parent component's template, where you want to use this reusable component, call the component and pass the event name (same as the EventEmitter variable) inside parentheses ().
+        4. To catch the emitted value from the reusable component in the parent component, use ($event) inside the parentheses.
+        5. Handle the emitted event in the parent component’s .ts file by defining a function to process the emitted value.
