@@ -1,0 +1,13 @@
+<!-- WITHOUT REUSABLE COMPONENT CODE -->
+<!-- <div class="alert alert-success" role="alert">
+    <strong>Success!</strong> This is my Signup page!
+</div> -->
+
+<!-- REUSABLE COMPONENT CODE -->
+
+<app-alert [message]="'Welcome to Signup Page!'" [alertType]="'Success'" ></app-alert>
+
+<br>
+
+<app-alert [message]="'Error occured.'" [alertType]="'Error'" ></app-alert>
+

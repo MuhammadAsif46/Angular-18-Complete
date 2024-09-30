@@ -211,6 +211,18 @@ checking system installed version this packages commands: (CLI)
     - 2 ways to use service ? (HttpClient)
         to use inject method for angular 16 - this is new way
         to use constructor method for angular before 16
-        
+
     - can we store data in service ?
         Yes we store data in the service.
+
+* Input - Output :-
+
+    1. What is reusable component?
+        In Angular, reusable components are self-contained units of functionality or UI 
+        that can be used across multiple parts of an application with customizable 
+        inputs and outputs.
+    2. What is use of Input?
+        The input passes data from the parent to the child.
+    3. What is use of Output?
+        The output passes data from the child to the parent.
+    4. when we have to create reusable component ?
