@@ -186,7 +186,7 @@ checking system installed version this packages commands: (CLI)
         -> API is a bridge that allows different software systems to talk to each other
     4- Get API 
         -- .http://jsonplaceholder.typicode.com/users
-        -- .http://projectap.gerasim.i n/api/RealEstate/GetAllCustomers
+        -- .http://projectapi.gerasim.in/api/RealEstate/GetAllCustomers
 
     Set-Up:-
     1- first we import provideHttpClient() in app.config.ts file.

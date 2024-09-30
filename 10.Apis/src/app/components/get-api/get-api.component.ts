@@ -13,8 +13,8 @@ export class GetApiComponent {
   customerList: any[] = [];
 
   constructor(private http: HttpClient) {
-    // this.getAllUsers(); page load the API call will be made.
-    // this.getAllCustomers();  // page load the API call will be made.
+    // this.getAllUsers(); // page load the API call will be made.
+    this.getAllCustomers(); //cls page load the API call will be made.
   }
 
   getAllUsers() {
@@ -25,20 +25,22 @@ export class GetApiComponent {
         this.userList = response;
       });
   }
+  // .get('https://projectapi.gerasim.in/api/RealEstate/GetAllCustomers1')
 
   getAllCustomers() {
     this.http
-      // .get('https://projectapi.gerasim.in/api/RealEstate/GetAllCustomers1')
-      .get('https://projectapi.gerasim.in/api/RealEstate/GetAllCustomers')
-      .subscribe((response: any) => {
-        console.log('CustomerRes-->', response.data);
-        this.customerList = response.data;
+      .get('https://projectapi.gerasim.in/api/RealEstate/GetAllCustomers').subscribe(
+        (response: any) => {
+          console.log('CustomerRes-->', response.data);
+          this.customerList = response.data;
 
-        // this.userList = response;
-      },error => {
-        console.log('Customer Error-->', error);
-        console.log('Customer Error-->', error.message);
-        // this.customerList = [];
-      });
+          // this.userList = response;
+        },
+        (error) => {
+          console.log('Customer Error-->', error);
+          console.log('Customer Error-->', error.message);
+          // this.customerList = [];
+        }
+      );
   }
 }

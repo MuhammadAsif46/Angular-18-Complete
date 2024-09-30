@@ -22,6 +22,8 @@ export class PostApiComponent implements OnInit {
 
  ngOnInit(): void {
      this.getAllDepartment();
+    //  console.log("hello");
+     
  }
 
   onSave() {
@@ -46,7 +48,7 @@ export class PostApiComponent implements OnInit {
   getAllDepartment() {
     this.http
       .get('https://projectapi.gerasim.in/api/Complaint/GetParentDepartment')
-      .subscribe((res:any) => {
+      .subscribe((res: any) => {
         console.log('res1-->', res);
         console.log('res1-->', res.data);
 
