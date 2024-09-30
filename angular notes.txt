@@ -193,3 +193,24 @@ checking system installed version this packages commands: (CLI)
     2- second we create constructor use HttpClient object in your component.
     3- third we create function and add api url to string form.
     4- fourth hold api response data in .subscribe() method.
+
+    http import two ways:
+        - use inject method ---> "http = inject(HttpClient)"
+       1.  Dependency injection:-
+        - use constructor method ---> constructor(private http: HttpClient){}
+
+*Services:
+    - What is service in Angular ?
+        Service is just a file where we keep our reusable code.
+
+    - For what we can use Service ?
+        The service is used 80 to 90% for API calls.
+        You don't just create functions for APIs in this.
+        You can also create reusable functions within it.
+
+    - 2 ways to use service ? (HttpClient)
+        to use inject method for angular 16 - this is new way
+        to use constructor method for angular before 16
+        
+    - can we store data in service ?
+        Yes we store data in the service.
