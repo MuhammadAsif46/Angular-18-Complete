@@ -282,3 +282,20 @@ checking system installed version this packages commands: (CLI)
         - ngOnInit purpose is components load honey ky bad ye function automatic call hota hai 
         = normally ngOnInit function hm apis call krne ky liye use krty hai pae load honay pr 
 
+* ng-template directive:
+    - What is ng-template ?
+        --> ng-template is nothing but a directive 
+            for example:- ngIf, ngFor, and ngModel just like that ngTemplate is also a directive
+    - How to use ng-template ?
+        --> ng-template is used to define a block of HTML that can be rendered dynamically 
+            or conditionally. The contents of ng-template are not rendered by default. 
+            You can control when and how it is displayed using Angular structural 
+            directives or programmatically.
+    - In which scenarios we have to use ng-template ?
+        - When you want to display some content only when a specific condition is true or false, 
+          you can use ng-template.
+        - If you need to reuse a template multiple times, you can create and use ng-template.
+        - When you need to display dynamic or custom content, such as modals, tabs, 
+          or UI elements that render in different places.
+        - With ng-template, you render only the templates that are needed, 
+          which improves the performance of the app.
