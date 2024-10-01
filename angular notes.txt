@@ -238,3 +238,47 @@ checking system installed version this packages commands: (CLI)
         3. In the parent component's template, where you want to use this reusable component, call the component and pass the event name (same as the EventEmitter variable) inside parentheses ().
         4. To catch the emitted value from the reusable component in the parent component, use ($event) inside the parentheses.
         5. Handle the emitted event in the parent component’s .ts file by defining a function to process the emitted value.
+
+* Component Life Cycle Event :-
+    1. What are component Life Cycle Events ?
+        - A component's lifecycle is the sequence of steps that happen between the component's 
+          creation and its destruction. Each step represents a different part of Angular's process 
+          for rendering components and checking them for updates over time.
+          
+    2. How to write Life Cycle Events ?
+    3. Sequence of Life Cycle Events ?
+        - constructor               : Runs when Angular instantiates the component.
+        - ngOnInit                  : Runs once after Angular has initialized all the component's inputs. 
+        - ngOnChanges               : Runs every time the component's inputs have changed. 
+        - ngDoCheck                 : Runs every time this component is checked for changes.
+        - ngAfterContentInit        : Runs once after the component's content has been initialized.
+        - ngAfterContentChecked     : Runs every time this component content has been checked for changes. 
+        - ngAfterViewInit           : Runs once after the component's view has been initialized. 
+        - ngAfterViewChecked        : Runs every time the component's view has been checked for changes.
+        - ngOnDestroy               : Runs once before the component is destroyed.
+        - afterNextRender           : Runs once the next time that all components have been rendered to the DOM. 
+        - afterRender               : Runs every time all components have been rendered to the DOM.
+
+    4. Which Life Cycle Event we mostly use ?
+        - ngOnInit
+        - ngOnChanges
+        - ngOnDestroy
+        - ngAfterViewInit
+
+    # constructor Event:
+        - The constructor is not a lifecycle event, but whenever we discuss the lifecycle, 
+          we should be aware of the constructor.
+        - An event that doesn't need to be explicitly called; it automatically triggers when the page reloads.
+        - And use the constructor to initialize variables.
+        Q: Can we call APIs inside the constructor?
+        A: No, we call APIs in ngOnInit.
+        
+    # OnInit (same as all events ):
+        - first we import OnInit function.
+        - Second we add class function "implemets OnInit"
+        - third we create a new function to name --> ngOnInit(): void {}; 
+    
+    # OnInit works:
+        - ngOnInit purpose is components load honey ky bad ye function automatic call hota hai 
+        = normally ngOnInit function hm apis call krne ky liye use krty hai pae load honay pr 
+
