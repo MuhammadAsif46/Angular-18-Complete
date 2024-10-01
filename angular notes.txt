@@ -65,12 +65,14 @@ checking system installed version this packages commands: (CLI)
         *ngSwitch - swich case to dynamic element.
 
     *ngIf - it need true or false value -- is using to import ---CommonModule--- :
+        if we use ngIf to import "CommonModule"
         we can pass value either from
                 variable
                 comparision
                 function
     
     *ngFor - we need to pass only array:  -- is using to import ---CommonModule--- :
+        if we use ngFor to import "CommonModule"
         we can pass value either from
                 variable
                 function
@@ -299,3 +301,18 @@ checking system installed version this packages commands: (CLI)
           or UI elements that render in different places.
         - With ng-template, you render only the templates that are needed, 
           which improves the performance of the app.
+
+* ng-container directive:
+    - What is ng-container ?
+        ->  ng-container is a logical container that is not rendered in the DOM. 
+            It is used to group elements without adding extra nodes to the HTML structure. 
+            This directive is useful for applying structural directives like *ngIf, *ngFor, etc., 
+            without creating additional elements.
+    - How to use ng-container ?
+        ->  You can use ng-container to conditionally display or repeat elements without adding 
+            extra elements to the DOM.
+            It is mostly used to display loaders until our data appears on the screen. 
+            It is also called an imaginary tag.
+    - how to use ng-template & ng-container together ?
+        ->  You can combine ng-template and ng-container to create a more organized structure 
+            for displaying content conditionally or dynamically.

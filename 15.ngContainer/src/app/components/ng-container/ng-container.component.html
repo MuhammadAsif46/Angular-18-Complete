@@ -1,0 +1,45 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded w-75 mx-auto">
+  <h1>ng-container</h1>
+</div>
+<div class="row w-75 mx-auto">
+  <div class="col-4">
+    <ng-container *ngIf="isContainer">
+      <p>This is from ng-container</p>
+    </ng-container>
+  </div>
+  <div class="col-4">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Name</th>
+          <th>UserName</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngIf="isApi">
+          <div class="spinner-grow text-dark text-center mt-3" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="!isApi">
+          <tr *ngFor="let user of userList; let srNo = index">
+            <td>{{ srNo + 1 }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-4"></div>
+</div>
+<div class="row w-75 mx-auto">
+  <div class="col-4"></div>
+  <div class="col-4">
+    <button class="btn btn-primary" (click)="getData()">Load Data</button>
+  </div>
+  <div class="col-4"></div>
+</div>
