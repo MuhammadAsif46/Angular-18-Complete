@@ -316,3 +316,36 @@ checking system installed version this packages commands: (CLI)
     - how to use ng-template & ng-container together ?
         ->  You can combine ng-template and ng-container to create a more organized structure 
             for displaying content conditionally or dynamically.
+
+* viewChild
+    - What is viewChild ?
+    -> In Angular, @ViewChild is a decorator used to get a reference to a DOM element 
+       or a child component within the parent component's template. It allows you to access 
+       and interact with the properties, methods, and events of child components, directives, 
+       or DOM elements directly from the parent component class.
+
+    - Create instance of component viewChild ?
+    -> To create an instance of a component using @ViewChild in Angular, you don't actually 
+       "create" the instance of the component manually; instead, you reference the already 
+       created instance of the child component in the parent component.
+
+     - Here’s how you can access an instance of a child component using @ViewChild:
+
+     --Steps to Access Child Component via @ViewChild:
+       1. Declare the Child Component in the Parent’s Template: Use the selector of the child 
+          component in the parent component’s template.
+       2. Use @ViewChild in the Parent Component: Reference the child component class in the 
+          parent component.
+       3. Access Child Methods or Properties: After Angular has initialized the view, the child 
+          component will be accessible and you can call its methods or access its properties.
+    
+    - Create instance of Html element viewChild ?
+    ->  To create an instance of an HTML element using @ViewChild in Angular, you access the native DOM element within your component's template. Angular provides access to the native element using ElementRef, which wraps the DOM element and allows you to interact with it directly.
+
+    --- Steps to Access an HTML Element via @ViewChild:
+        1. Add a Template Reference Variable: Add a template reference variable 
+            (e.g., #inputElement) in the HTML where you want to reference the DOM element.
+        2. Use @ViewChild in the Component Class: Access that DOM element by referencing the 
+            template variable using @ViewChild and ElementRef.
+        3. Access the DOM Element Methods and Properties: Once Angular initializes the view, 
+            you can interact with the native DOM element.
