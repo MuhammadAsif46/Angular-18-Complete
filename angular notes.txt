@@ -349,3 +349,29 @@ checking system installed version this packages commands: (CLI)
             template variable using @ViewChild and ElementRef.
         3. Access the DOM Element Methods and Properties: Once Angular initializes the view, 
             you can interact with the native DOM element.
+
+* Decorators
+    - What is Decorators ?
+        -> A decorator is something that we create in Angular, for example: a class, 
+        directive, pipe, component, etc. How does Angular know whether something is a 
+        directive or a module? It finds out with the help of decorators. A decorator is a 
+        piece of code that helps Angular determine what the element is, whether it's a class,
+        pipe, module, or directive.
+    
+    - Class Decorators ?
+        -> Class decorators are the decorators that are created before a class.
+           For example: @Component, @Injectable, @Pipe, @Directive, and @NgModule.
+    
+    - Property Decorators ?
+        -> Property decorators are the decorators that are created in front of a variable.
+           For example: @Input, @Output, and @HostBinding.
+    
+    - Method Decorators ?
+        -> Method decorators are the decorators that are created before a method.
+           For example: @HostListener.
+    
+    - Parameter Decorators ?
+        -> Parameter decorators are used to decorate the parameters of a method in a class. 
+           They allow you to add metadata to a method's parameter, such as injecting
+           dependencies or customizing how parameters are handled within the method.
+           For example: @Inject().
