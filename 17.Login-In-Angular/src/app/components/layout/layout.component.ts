@@ -12,6 +12,14 @@ import { HomeComponent } from '../home/home.component';
 export class LayoutComponent {
 
 router = inject(Router)
+isUserData : any;
+
+constructor(){
+  const loggedUser = localStorage.getItem('userData');
+  if (loggedUser !== null) { 
+    this.isUserData = JSON.parse(loggedUser)
+  }
+}
 
   logout(){
     localStorage.removeItem('userName');

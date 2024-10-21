@@ -4,12 +4,15 @@
       <h2>Login</h2>
       <form action="#">
         <div class="input-box">
-          <input [(ngModel)]="userObj.userName"  type="userName" required name="username" id="username"/>
+          <!-- Hard-Code -->
+          <!-- <input [(ngModel)]="userObj.userName"  type="userName" required name="username" id="username"/> -->
+          <!-- with Swigger API -->
+          <input [(ngModel)]="userObj.EmailId"  type="userName" required name="EmailId" id="username"/>
           <label>Email</label>
         </div>
 
         <div class="input-box">
-          <input [(ngModel)]="userObj.password"  type="password" required name="password" id="password"/>
+          <input [(ngModel)]="userObj.Password"  type="password" required name="Password" id="password"/>
           <label>Password</label>
         </div>
 
