@@ -14,7 +14,7 @@ export class ViewChildComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     const value = this.textBox?.nativeElement.value;
     // console.log(value);
-    debugger;
+    // debugger;
     
   }
   

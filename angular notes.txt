@@ -375,3 +375,12 @@ checking system installed version this packages commands: (CLI)
            They allow you to add metadata to a method's parameter, such as injecting
            dependencies or customizing how parameters are handled within the method.
            For example: @Inject().
+
+* Login Page:
+    - How to implement the login page in Angular.
+    - Types of Login
+        1. Admin App
+        2. Website Login
+    - Mode of Login
+        1. with hard-code user credentials 
+        2. with api Intergration
