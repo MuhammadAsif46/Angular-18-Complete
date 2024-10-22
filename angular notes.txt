@@ -403,3 +403,22 @@ checking system installed version this packages commands: (CLI)
         2. Implement the CanActivate Interface
         3. Apply the Guard to Routes
         4. Test the Guard
+
+*Constant File:
+    - How to create the Constant file in angular?
+    ->  Create a .ts file (e.g., constants.ts) in your project and export an object 
+        containing constant values:
+    
+    - What to store in constant file?
+    ->  Store values that are reused across the app, such as API URLs, configuration 
+        settings, default timeouts, or any static data
+
+    - How to read constant file data?
+    ->  Import the constant file into any component or service:
+
+---> One more thing Constant:
+    Why do we create constants? If you want to display repeated values in a project, 
+    show error messages consistently, or show a 'field required' message just once, 
+    you can write all the errors in a constants file and call them from there. 
+    In production projects, everything comes through the constants file;
+    we don't keep things static.
