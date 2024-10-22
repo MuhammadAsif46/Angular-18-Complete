@@ -384,3 +384,22 @@ checking system installed version this packages commands: (CLI)
     - Mode of Login
         1. with hard-code user credentials 
         2. with api Intergration
+
+*Guard
+    - What is Guard?
+    ->  In Angular, Guards are used to control the navigation and access to routes. 
+        They help determine whether a user can access a certain route or not, 
+        based on specific conditions like authentication, roles, or other logic.
+
+    - What are types of Guard?
+    ->  CanActivate: Checks if a route can be activated.
+    ->  CanDeactivate: Checks if a user can leave the route.
+    ->  CanActivateChild: Checks if child routes can be activated.
+    ->  CanLoad: Prevents lazy-loaded modules from being loaded if the condition is not met.
+    
+    - How to use canActivate Guard?
+    -> To use the CanActivate guard in Angular, follow these steps:
+        1. Create the Guard ---> command:- ng generate guard auth
+        2. Implement the CanActivate Interface
+        3. Apply the Guard to Routes
+        4. Test the Guard
