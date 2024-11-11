@@ -422,3 +422,81 @@ checking system installed version this packages commands: (CLI)
     you can write all the errors in a constants file and call them from there. 
     In production projects, everything comes through the constants file;
     we don't keep things static.
+
+*Class & Interface:
+    1. How to create class ?
+    --> In TypeScript, a constructor is not strictly necessary within a class to declare variables.
+        However, it's commonly used to initialize properties when creating new instances of the class.
+    --> To create an instance of a class, you simply use the new keyword followed by the class name.
+        The constructor is then called automatically to initialize the object.
+
+    create class syntax:
+        -> export class ClassName {
+                id: number;
+                name: string;
+
+                constructor(){
+                    this.id = 0;
+                    that.name = "";
+                }
+            }
+    // todo remaining //
+    2. How to create interface ?
+    interface ky under varible ko declare karny kyliye constructor ki zarort nhi parti wo interface ky under he declare krdeta hai
+    create interface syntax:
+        -> export interface interfaceNAme {
+                id: number,
+                name: string,
+            }
+    interface ky under apko jha ap interface use krty ho usko wahi initailize krna parta hai.
+
+    
+    3. when to use class & when to use interface ?
+    -- Classes define the structure and behavior of objects. Interfaces define a contract that classes must adhere to, 
+       specifying their properties and methods.
+        -> creating variable to bind form - class
+        -> creating variable to hold array - interface
+
+
+*Signal:
+    1. What is signal ?
+    ->  Signals are a new feature in Angular 15 that offer a more reactive and efficient way to manage state and data flow in your applications.
+        They provide a simpler and more intuitive approach to state management compared to traditional methods like RxJS.
+    
+    # Key Benefits of Signals:
+
+    1. Simplified State Management:---> Signals make state management more straightforward, reducing the need for complex RxJS pipelines.
+    2. Efficient Updates:---> Signals optimize updates, ensuring that only necessary components are re-rendered.
+    3. Improved Performance:---> By minimizing unnecessary re-renders, signals can lead to better performance.
+    4. Familiar Syntax:---> Signals use a familiar syntax, making it easier to learn and adopt.
+    
+    2. How to create signal ?
+    import { signal } from '@angular/core';
+    
+    // Create a signal
+    const count = signal(0);
+    console.log(count()); // Output: 0
+
+    3. How to update signal ?
+
+    // To update the signal:
+    count.update(value => value + 1); // Increment the value by 1
+    count.update(value => value * 2); // Double the value
+
+    # Key Points:
+
+    1. Functional Update:---> The update method takes a callback function that receives the current value as an argument.
+    2. Immutability:---> The callback function should return the new value. The old value is not directly modified.
+    3. Re-rendering:---> Angular's change detection mechanism will automatically re-render components that depend on the signal's value.
+
+    4. How to access signal value ?
+
+    import { signal } from '@angular/core';
+    const count = signal(0);
+    // To access the current value of the signal:
+    const currentValue = count();
+    console.log(currentValue); // Output: 0
+    
+    # Key Point:
+    
+    1. Function Call:--> To access the current value of a signal, you simply call it like a function.
