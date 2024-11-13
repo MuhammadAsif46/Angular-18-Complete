@@ -500,3 +500,10 @@ checking system installed version this packages commands: (CLI)
     # Key Point:
     
     1. Function Call:--> To access the current value of a signal, you simply call it like a function.
+
+
+*Rxjs subject & behaviourSubject:
+
+    1.What is Rxjs?
+    2.how to create subject?
+    3.
