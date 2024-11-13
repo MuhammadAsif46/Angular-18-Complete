@@ -11,7 +11,10 @@
     {{ rollNo() }}
   </div>
   <div class="col-3">
-    fullName -- {{ fullName() }}
+    fullName --- {{fullName()}}
+  </div>
+  <div class="col-3">
+    {{cityList()}}
   </div>
 </div>
 <div class="row">
@@ -29,10 +32,27 @@
     <button class="btn btn-primary" (click)="computedFirstNameHandle()">
       Computed First Name
     </button>
-  </div>
-  <div class="col-3">
     <button class="btn btn-primary" (click)="computedLastNameHandle()">
       Computed Last Name
+    </button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-primary" (click)="addCityNameHandle()">
+      Add City Name
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3">
+    {{stdData().stdId}}
+    {{stdData().stdName}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <button class="btn btn-primary" (click)="updateObjHandle()">
+      Update Object
     </button>
   </div>
 </div>

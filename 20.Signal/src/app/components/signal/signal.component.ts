@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  signal,
+} from '@angular/core';
 
 @Component({
   selector: 'app-signal',
@@ -9,15 +14,21 @@ import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/c
   // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SignalComponent {
-  firstName = signal('Angular 18');
-  courseName: string = 'HTML';
+  // Signal Varibale
+  firstName = signal('Angular 18'); // string
+  rollNo = signal<number>(123); // number
+  cityList = signal(['Karachi', 'Lahore']); // Array
+  stdData = signal({ stdId: 123, stdName: 'Fahad' }); //Object
+  computedFirstName = signal('Jhon'); //string
+  computedLastName = signal('Elia'); //string
 
-  rollNo = signal<number>(123);
+  // Normal Varibale
+  courseName: string = 'HTML'; //string
 
-  computedFirstName = signal('Jhon');
-  computedLastName = signal('Elia');
-
-  fullName = computed(() => this.changeFirstName + ' ' + this.computedLastName);
+  // merge first and last name using computed method.
+  fullName = computed(
+    () => this.computedFirstName() + ' ' + this.computedLastName()
+  );
 
   constructor() {
     setTimeout(() => {
@@ -25,17 +36,33 @@ export class SignalComponent {
       this.courseName = 'CSS';
     }, 3000);
   }
-
+  // changeFirstName handle:
   changeFirstName() {
     this.firstName.set('Javascript');
   }
+
+  // changeRollno handle:
   changeRollNo() {
     this.rollNo.set(456);
   }
+
+  // computed ChangeFirstName handle:
   computedFirstNameHandle() {
-    this.computedFirstName.set("hello");
+    this.computedFirstName.set('hello');
   }
+
+  // computed ChangeFirstName handle:
   computedLastNameHandle() {
-    this.computedLastName.set("world");
+    this.computedLastName.set('world');
+  }
+
+  // add new City handle using Array:
+  addCityNameHandle() {
+    this.cityList.set([...this.cityList(), 'Multan']);
+  }
+
+  // update obj City handle using object:
+  updateObjHandle() {
+    this.stdData.set({ ...this.stdData(), stdName: 'Gulam' });
   }
 }
