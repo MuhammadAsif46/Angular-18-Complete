@@ -505,8 +505,22 @@ checking system installed version this packages commands: (CLI)
 *Rxjs subject & behaviourSubject:
 
     1.What is Rxjs?
-        -> Rxjs is external library to use Angular to use asencronously behavior by default installed in Angular. 
+        -> RxJS (Reactive Extensions for JavaScript) is a library for reactive programming using Observables. It provides a set of tools to handle asynchronous data streams and event-based programs in a more manageable way.
+        -> In Angular, RxJS is included by default and is essential for handling asynchronous tasks, like HTTP requests and events. 
+    
     2.how to create subject?
-        -> import subject from "angular/rxjs".
+        -> To create a Subject in RxJS, you need to import it from rxjs (not angular/rxjs). Here’s how:
+        #Syntax:
+            import { Subject } from 'rxjs';
+            const subject = new Subject();
+
     3.how to create behaviorSubject?
+        -> To create a BehaviorSubject, you also import it from rxjs:
+        #Syntax:
+            import { BehaviorSubject } from 'rxjs';
+            const behaviorSubject = new BehaviorSubject(initialValue);
+
     4.difference between subject and behaviorSubject?
+        -> In summary, BehaviorSubject is especially useful when you want to keep track of the latest state and 
+        ensure new subscribers immediately receive the current value. Subject, on the other hand, 
+        is good for simple event broadcasting without state management.
