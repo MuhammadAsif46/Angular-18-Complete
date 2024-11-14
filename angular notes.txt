@@ -505,5 +505,8 @@ checking system installed version this packages commands: (CLI)
 *Rxjs subject & behaviourSubject:
 
     1.What is Rxjs?
+        -> Rxjs is external library to use Angular to use asencronously behavior by default installed in Angular. 
     2.how to create subject?
-    3.
+        -> import subject from "angular/rxjs".
+    3.how to create behaviorSubject?
+    4.difference between subject and behaviorSubject?
